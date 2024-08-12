@@ -31,7 +31,7 @@ export default function HomePage() {
       />
       <EventsSection />
       {/* <GiveawaySection /> */}
-      {/* <NewsletterSection /> */}
+      <NewsletterSection />
     </section>
   );
 }

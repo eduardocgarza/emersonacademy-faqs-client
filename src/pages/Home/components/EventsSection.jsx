@@ -6,7 +6,7 @@ import mascotEm from "../../../assets/mascot-em.png";
 
 export default function EventsSection() {
   return (
-    <section className="py-6 mt-20 mb-10">
+    <section className="pt-20 pb-40">
       <header className="mb-20 text-center">
         <h2 className="text-4xl text-center font-semibold mb-4">
           Upcoming events
