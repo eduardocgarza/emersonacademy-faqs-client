@@ -4,18 +4,31 @@ import GiveawaySection from "./components/GiveawaySection";
 import EventsSearchNav from "./components/EventsSearchNav";
 import EventsSection from "./components/EventsSection";
 import VideoItem from "./components/VideoItem";
+import { ALL_VIDEOS } from "../../data/videos";
+import VideosSection from "./components/VideosSection";
 
-export default function EventsPage() {
+export default function HomePage() {
+  const [selectedSections, setSelectedSections] = React.useState([
+    {
+      name: "aboutEmerson",
+      selected: true,
+    },
+    {
+      name: "workshops",
+      selected: true,
+    },
+  ]);
+
   return (
     <section className="px-10 py-4">
-
-      <VideoItem 
-        title="Events"
-        url="https://www.loom.com/embed/fec8a6ca52ba4484ac510e55f2919d0f"
+      <EventsSearchNav
+        selectedSections={selectedSections}
+        setSelectedSections={setSelectedSections}
       />
-      
-      
-      {/* <EventsSearchNav /> */}
+      <VideosSection 
+        selectedSections={selectedSections}
+        setSelectedSections={setSelectedSections}
+      />
       <EventsSection />
       {/* <GiveawaySection /> */}
       {/* <NewsletterSection /> */}
