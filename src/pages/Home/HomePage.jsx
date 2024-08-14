@@ -6,6 +6,8 @@ import EventsSection from "./components/EventsSection";
 import VideoItem from "./components/VideoItem";
 import { ALL_VIDEOS } from "../../data/videos";
 import VideosSection from "./components/VideosSection";
+import Intercom from "@intercom/messenger-js-sdk";
+import PublicPageHelmet from "../../components/PublicPageHelmet";
 
 export default function HomePage() {
   const [selectedSections, setSelectedSections] = React.useState([
@@ -18,8 +20,13 @@ export default function HomePage() {
       selected: true,
     },
   ]);
+  Intercom({
+    app_id: "iwce5cdu",
+  });
 
   return (
+    <>
+    <PublicPageHelmet />
     <section className="px-10 py-4">
       <EventsSearchNav
         selectedSections={selectedSections}
@@ -33,5 +40,6 @@ export default function HomePage() {
       {/* <GiveawaySection /> */}
       <NewsletterSection />
     </section>
+    </>
   );
 }
