@@ -5,7 +5,7 @@ export default function PublicPageHelmet() {
   const title = "AI Business Tools Workshop | Emerson Academy Vancouver FAQs";
   const description = "Get answers to frequently asked questions about the AI Business Tools Zero to Hero workshop for entrepreneurs and business owners in Vancouver. Learn about the event, speakers, and more.";
   const url = "https://faqs.emersonacademy.org";
-  const pageThumbnail = `${url}/public/site-faqs.png`;
+  const pageThumbnail = `${url}/site-faqs.png`;
 
   return (
     <Helmet>
